@@ -1,0 +1,171 @@
+EXPERIMENT 1
+Version Control and Repository Setup with Git and GitHub
+
+Aim:
+To use version control and repository setup with Git and GitHub. 
+
+Procedure
+Download Git from the Git download webpage by selecting Download for Windows.
+Select Git for Windows/x64 Setup and download the installer.
+Open the downloaded installer from the Downloads folder.
+Install Git by following the setup wizard.
+After installation, launch Git Bash.
+Download and install GitHub Desktop.
+Log in to the GitHub account.
+Create a new repository by selecting New Repository.
+Enter the repository name and create the repository.
+Open Git Bash from Windows Terminal.
+Create a project folder using mkdir and enter it using cd.
+Initialize Git using git init.
+Configure the Git username and email.
+Connect the local repository with the GitHub repository.
+Create a file in the project folder.
+Add the file using git add.
+Commit the changes using git commit -m.
+Change the branch name to main using git branch -M main.
+Push the changes to GitHub using git push.
+Verify the repository and file on GitHub.
+
+These steps follow the sequence in your record. 
+
+Result:
+Thus, the Git and GitHub repository was set up successfully and the output was verified. 
+
+For writing: You don't need to write a Java program here. It's a Git/GitHub procedure.
+
+EXPERIMENT 2
+Collaborating on GitHub Using Branches and Pull Requests
+
+Aim:
+To collaborate on GitHub using branches and pull requests. 
+
+Procedure
+Open GitHub Desktop.
+Select the repository and choose Clone Repository.
+Clone the repository to the local system.
+Open the repository in VS Code.
+Create a sample file.
+Commit the file with a suitable description.
+Publish the main branch.
+Select Current Branch → New Branch.
+Enter a branch name and create the branch.
+Publish the new branch to GitHub.
+Select the branch menu and choose Create Pull Request.
+Enter the pull request title and description.
+Push the changes to the remote repository.
+Create the pull request.
+Review the changes and merge the sub-branch into the main branch.
+Confirm the merge.
+
+This is essentially the exact workflow in your record. 
+
+Result:
+Thus, collaboration using branches and pull requests was successfully completed. 
+
+Remember the story
+
+Main → New Branch → Make Change → Commit → Push → Pull Request → Merge
+
+That's enough to remember the whole experiment.
+
+EXPERIMENT 3
+Managing Issues and Project Boards on GitHub
+
+Aim:
+To manage issues and project boards on GitHub. 
+
+Procedure
+Open GitHub Desktop and select the repository.
+Select Repository → View on GitHub.
+Open the Issues tab.
+Select New Issue.
+Open the Projects tab.
+Create a new project.
+Select the Board category.
+Click Create Project.
+Enter a suitable project name and description.
+Open the Issues section.
+Create a new issue.
+Select Blank Issue and click Next.
+Enter the issue title and description.
+Select the Projects option.
+Add the issue to the created project.
+Open the project board.
+Move the issue through the columns:
+To Do → In Progress → Done.
+
+This matches your record's procedure. 
+
+Result:
+Thus, the issue and project board were managed successfully. 
+
+Remember the story
+
+Create Project → Create Issue → Add Issue to Board → To Do → In Progress → Done
+
+That's it.
+
+EXPERIMENT 4
+Installing and Configuring Gradle for Project Build Automation
+
+Aim:
+To download and install Gradle for project build automation. 
+
+Procedure
+Check whether Java/JDK is installed in the system.
+Download the latest Gradle distribution.
+Download the Gradle ZIP file.
+Extract/unpack the Gradle distribution ZIP file.
+Place the Gradle folder in the required location.
+Configure the Gradle bin path.
+Configure the System Environment Variables.
+Add the Gradle bin directory to the system Path.
+Save the environment-variable settings.
+Verify that Gradle is configured correctly.
+
+Your record itself gives the short version: check Java → download Gradle → unpack ZIP → configure C:/gradle/bin → configure system environment. 
+
+Result:
+Thus, Gradle was installed and configured successfully for project build automation. 
+
+One thing to remember for viva
+
+Gradle = Build Automation Tool.
+
+It automates activities such as compiling, testing, packaging and building software projects. 
+
+EXPERIMENT 5
+Creating a Java Project and Implementing Custom Tasks in Gradle
+
+This one is not like 6–8.
+
+Your record does not give a big Java program here. It gives the Gradle project creation procedure and commands/options. 
+
+Aim:
+To create a Java project and implement custom tasks in Gradle. 
+
+Procedure
+Open the terminal in the required project directory.
+Run the Gradle initialization command to create a new Gradle project.
+If Gradle asks for confirmation because files already exist, enter Yes.
+Select Application as the project type.
+Select Java as the programming language.
+Select the required Java version.
+Enter the project name.
+Select Single application project.
+Select Groovy DSL so that build.gradle is generated.
+Select JUnit 4 as the testing framework.
+Accept the default final option by pressing Enter.
+Gradle generates the project structure.
+The project contains folders such as:
+src/main/java
+src/test/java
+build.gradle
+Open the generated project in VS Code using code ..
+Create/configure the required Gradle tasks.
+Execute the Gradle commands and verify the result.
+
+Your record specifically says the initialization generates the basic project structure, configuration files and build scripts, and later confirms the src/main/java, src/test/java, and build.gradle structure. 
+
+Result:
+Thus, the Gradle project was created successfully and the custom tasks were implemented successfully
