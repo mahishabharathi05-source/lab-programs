@@ -1,0 +1,338 @@
+EXPERIMENT NO: 6
+
+IMPLEMENTING LOOPING CONSTRUCTS IN GRADLE
+
+AIM:
+
+To display all prime numbers from 1 to 100 using a method.
+
+ALGORITHM / PROCEDURE:
+
+Start the program execution by initializing the main method.
+Define a reusable method named isPrime(int num) to determine whether a given number is prime or not.
+Inside the isPrime method, return false if the number is less than or equal to 1.
+Check the divisibility of the number by iterating from 2 up to the square root of the number.
+If the number is divisible by any value, return false.
+If no divisor is found, return true, indicating that the number is prime.
+Create another method named printPrimes(int limit) to iterate through all numbers from 1 to the specified limit.
+Call the isPrime() method for each number. If it returns true, print the number.
+
+PROGRAM:
+
+public class PrimeNumbers {
+
+public static boolean isPrime(int num) {
+    if (num <= 1)
+        return false;
+
+    for (int i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i == 0)
+            return false;
+    }
+
+    return true;
+}
+
+public static void printPrimes(int limit) {
+    for (int i = 1; i <= limit; i++) {
+        if (isPrime(i)) {
+            System.out.print(i + " ");
+        }
+    }
+}
+
+public static void main(String[] args) {
+    System.out.println("Prime numbers between 1 and 100:");
+    printPrimes(100);
+}
+
+}
+
+OUTPUT:
+
+Prime numbers between 1 and 100:
+2 3 5 7 11 13 17 ... 97
+
+RESULT:
+
+The program correctly prints prime numbers from 1 to 100.
+
+==================================================
+
+EXPERIMENT NO: 7
+
+WORKING WITH ARRAYS IN GRADLE
+
+7(a) CALCULATE THE SUM OF ARRAY ELEMENTS
+
+AIM:
+
+To calculate the sum of elements in an array using methods and user input.
+
+ALGORITHM / PROCEDURE:
+
+Start the program execution by creating the main method.
+Prompt the user to enter the number of elements in the array.
+Declare and initialize an integer array of the given size.
+Read the elements of the array using a loop and store them in the array.
+Pass the array to a method named calculateSum(int[] arr).
+Inside the calculateSum method, initialize sum = 0 and add each array element to the sum.
+Return the final sum to the main method and display the result.
+
+PROGRAM:
+
+import java.util.Scanner;
+
+public class SumArray {
+
+public static int calculateSum(int[] arr) {
+    int sum = 0;
+
+    for (int num : arr) {
+        sum += num;
+    }
+
+    return sum;
+}
+
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+
+    System.out.print("Enter number of elements: ");
+    int n = sc.nextInt();
+
+    int[] array = new int[n];
+
+    System.out.println("Enter the elements:");
+
+    for (int i = 0; i < n; i++) {
+        array[i] = sc.nextInt();
+    }
+
+    int total = calculateSum(array);
+
+    System.out.println("Sum of array elements: " + total);
+}
+
+}
+
+OUTPUT:
+
+Enter number of elements: 5
+Enter the elements:
+1 2 3 4 5
+Sum of array elements: 15
+
+RESULT:
+
+The program works correctly and computes the sum of array elements using a method.
+
+==================================================
+
+7(b) SELECTION SORT
+
+AIM:
+
+To sort an array using Selection Sort method in Java.
+
+ALGORITHM / PROCEDURE:
+
+Start the program by creating the main method.
+Prompt the user to enter the number of elements and initialize an integer array.
+Read all elements of the array from the user.
+Call the method selectionSort(int[] arr) to sort the array in ascending order.
+Inside the selectionSort method, iterate through the array and assume the current index as the minimum index.
+Compare the current element with the remaining unsorted elements and find the minimum element.
+Swap the minimum element with the current element.
+Repeat the process until the entire array is sorted and display the sorted array.
+
+PROGRAM:
+
+import java.util.Scanner;
+
+public class SelectionSort {
+
+public static void selectionSort(int[] arr) {
+
+    for (int i = 0; i < arr.length - 1; i++) {
+
+        int minIndex = i;
+
+        for (int j = i + 1; j < arr.length; j++) {
+
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+
+        int temp = arr[minIndex];
+        arr[minIndex] = arr[i];
+        arr[i] = temp;
+    }
+}
+
+public static void main(String[] args) {
+
+    Scanner sc = new Scanner(System.in);
+
+    System.out.print("Enter number of elements: ");
+    int n = sc.nextInt();
+
+    int[] array = new int[n];
+
+    System.out.println("Enter the elements:");
+
+    for (int i = 0; i < n; i++) {
+        array[i] = sc.nextInt();
+    }
+
+    selectionSort(array);
+
+    System.out.println("Sorted array:");
+
+    for (int num : array) {
+        System.out.print(num + " ");
+    }
+}
+
+}
+
+OUTPUT:
+
+Enter number of elements: 5
+Enter the elements:
+5 3 8 1 2
+Sorted array: 1 2 3 5 8
+
+RESULT:
+
+The program sorts the array using selection sort method correctly.
+
+==================================================
+
+EXPERIMENT NO: 8
+
+PERFORMING STRING OPERATIONS IN GRADLE
+
+8(a) REVERSE A STRING
+
+AIM:
+
+To reverse a string using method and user input in Java.
+
+ALGORITHM / PROCEDURE:
+
+Start the program execution by defining the main method.
+Prompt the user to enter a string using the Scanner class.
+Pass the string to a separate method named reverse(String str).
+Inside the reverse method, initialize an empty string variable named reversed.
+Traverse the input string from the last character to the first character using a loop.
+Append each character to the reversed string.
+Return the reversed string to the main method.
+Display the reversed string.
+
+PROGRAM:
+
+import java.util.Scanner;
+
+public class ReverseString {
+
+public static String reverse(String str) {
+
+    String reversed = "";
+
+    for (int i = str.length() - 1; i >= 0; i--) {
+        reversed += str.charAt(i);
+    }
+
+    return reversed;
+}
+
+public static void main(String[] args) {
+
+    Scanner sc = new Scanner(System.in);
+
+    System.out.print("Enter a string: ");
+    String input = sc.nextLine();
+
+    String output = reverse(input);
+
+    System.out.println("Reversed String: " + output);
+}
+
+}
+
+OUTPUT:
+
+Enter a string: Hello
+Reversed String: olleH
+
+RESULT:
+
+The program successfully reverses a string using a method.
+
+==================================================
+
+8(b) COUNT VOWELS IN A STRING
+
+AIM:
+
+To count vowels in a string using a method and user input.
+
+ALGORITHM / PROCEDURE:
+
+Start the program execution by defining the main method.
+Prompt the user to enter a string using the Scanner class.
+Pass the input string to a separate method named countVowels(String str).
+Inside the countVowels method, initialize a counter variable count = 0.
+Iterate over each character of the string using a loop.
+Convert each character to lowercase using Character.toLowerCase() and check whether it is a, e, i, o, or u.
+Whenever a vowel is found, increment the counter by one.
+Return the counter value to the main method.
+Display the total number of vowels in the string.
+
+PROGRAM:
+
+import java.util.Scanner;
+
+public class VowelCount {
+
+public static int countVowels(String str) {
+
+    int count = 0;
+
+    for (int i = 0; i < str.length(); i++) {
+
+        char ch = Character.toLowerCase(str.charAt(i));
+
+        if (ch == 'a' || ch == 'e' || ch == 'i' ||
+            ch == 'o' || ch == 'u') {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+public static void main(String[] args) {
+
+    Scanner sc = new Scanner(System.in);
+
+    System.out.print("Enter a string: ");
+    String input = sc.nextLine();
+
+    int vowelCount = countVowels(input);
+
+    System.out.println("Number of vowels: " + vowelCount);
+}
+
+}
+
+OUTPUT:
+
+Enter a string: Education
+Number of vowels: 5
+
+RESULT:
+
+The program correctly counts vowels in a user-provided string.
